@@ -1,0 +1,257 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #202020;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    margin-top: 300px;
+    margin-bottom: 0px;
+    height: 900px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+.card {
+    width: 420px;
+    height: 80px;
+    border-radius: .75rem;
+    background-size: cover;
+    flex-direction: column;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0px 10px 0px 10px;
+    display: flex;
+    align-items: flex-start;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+.card > .row {
+    color: rgb(214, 146, 0);
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card > .row > .icon {
+    background: rgba(24, 24, 70, 0.644);
+    color: rgba(255, 255, 255, 0.452);
+    border-radius: 30px;
+    width: 120px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+.card > .row > .description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #ffffffbb;
+    overflow: hidden;
+    height: 80px;
+    width: 300px;
+    flex-wrap: wrap;
+    
+    border-bottom-left-radius: 30px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+
+.card > .Ni {
+    /*border-radius: 30px;*/
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    justify-content: center;
+    margin-left: -7px;
+}
+
+.Ni h3 {
+    
+    text-align: center;
+}
+
+.Ni table td {
+    text-align: center;
+    height: 40px;
+}
+
+.Ni input {
+    margin-left: 50px;
+    border-radius: 5px;
+    border-color: #223;
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+    text-align: center;
+}
+.Ni table tr td label {
+    color: white;
+    margin-left: 10px;
+    background-color: #223;
+    
+    width: 30px;
+    
+}
+.Ni table .icon {
+    margin-top: 30px;
+    margin-left: 10px;
+    color: rgb(214, 146, 0);
+    background-color: #131316b2;
+    display: flex;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.hi {
+    background: rgba(24, 24, 70, 0.767);
+    color: rgb(214, 146, 0);
+    border-radius: 30px;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -3px 0px 0px 5px;
+}
+
+.hi2 {
+    background: rgba(24, 24, 70, 0.767);
+    color: rgb(214, 146, 0);
+    border-radius: 30px;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0px 0px 10px;
+}
+
+.hi3 {
+    background-image: url("https://cdn.glitch.global/9d79d31e-fe60-4bfb-a5b7-c783562eb690/ab.png?v=1714266035060");
+    opacity: 1;
+    
+    background-size: 200px;
+    background-position: center;
+    color: rgb(214, 146, 0);
+    border-radius:  30%;
+    border-width: 10px;
+    border-color: rgb(214, 146, 0);
+    width: 97px;
+    height: 94px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    margin: 75px 158px 70px 5px;
+}
+
+#fullscreenDiv {
+    display: none;
+    position: fixed;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100vw; /* 100% of the viewport width */
+    height: 100vh; /* 100% of the viewport height */
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black background */
+    z-index: 9999; /* Ensure it's on top of other elements */
+}
+
+#fullscreenVideo {
+    width: 80%; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+button {
+    width: 97px;
+    height: 94px;
+    border-radius: 30%;
+    background-color: #13131602;
+}
+
+.description p {
+    color: #131316;
+    padding-top: 5px;
+    margin-left: 37px;
+}
+
+.description h4 {
+    margin-left: 40px;
+    text-transform: uppercase;
+}
+
+.inputF {
+    display: none;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+input:checked + label {
+    width: 420px;
+    height: 420px;
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.card[for="c1"] {
+    /*background-image: url('./1.png');*/
+    background-image: url("https://cdn.glitch.global/9d79d31e-fe60-4bfb-a5b7-c783562eb690/m.png?v=1714266222193");
+}
+.card[for="c2"] {
+    background-image: url('https://cdn.glitch.global/9d79d31e-fe60-4bfb-a5b7-c783562eb690/p.png?v=1714266260579');
+}
+.card[for="c3"] {
+    background-image: url('https://cdn.glitch.global/9d79d31e-fe60-4bfb-a5b7-c783562eb690/ch.png?v=1714266052030');
+}
+.card[for="c4"] {
+    background-image: url('https://cdn.glitch.global/9d79d31e-fe60-4bfb-a5b7-c783562eb690/cs.png?v=1714266096994');
+}
+.card[for="c5"] {
+    /*background-image: url('./1.png');*/
+    background-image: url("https://cdn.glitch.global/9d79d31e-fe60-4bfb-a5b7-c783562eb690/met.png?v=1714266241039");
+}
+.card[for="c6"] {
+    background-image: url("https://cdn.glitch.global/9d79d31e-fe60-4bfb-a5b7-c783562eb690/st.png?v=1714266017049");
+}
+.card[for="c7"] {
+    background-image: url("https://cdn.glitch.global/9d79d31e-fe60-4bfb-a5b7-c783562eb690/e.png?v=1714266121192");
+}
+.card[for="c8"] {
+    background-image: url("https://cdn.glitch.global/9d79d31e-fe60-4bfb-a5b7-c783562eb690/en.png?v=1714266142166");
+}
+
+
+
+.card[for="c9"] {
+    background-image: url("https://cdn.glitch.global/9d79d31e-fe60-4bfb-a5b7-c783562eb690/cp.png?v=1714266078190");
+}
